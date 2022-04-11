@@ -23,12 +23,19 @@ for (let i = 1; i<= 100; ++i) {
     let fizzBuzz;
     if (i % 5 === 0 && i % 3 === 0){
         fizzBuzz = "FizzBuzz";
-        console.log(fizzBuzz);
+        console.log(i, fizzBuzz);
     } else if (i % 5 === 0) {
         fizzBuzz = "Buzz";
-        console.log(fizzBuzz);
+        console.log(i, fizzBuzz);
     } else if (i % 3 === 0) {
         fizzBuzz = "Fizz";
-        console.log(fizzBuzz);
+        console.log(i, fizzBuzz);
+    } else {
+        fizzBuzz = i;
     }
+    // Aggiungere html elements tramite template literal
+    const row = document.querySelector('.row');
+    row.innerHTML += `<div class="box">${fizzBuzz}</div>`;
+    console.log(row);
+
 }
